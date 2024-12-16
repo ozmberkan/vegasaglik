@@ -23,23 +23,40 @@ export const services = [
 
 export const doctors = [
   {
+    id: 1,
     name: "Dr. Mehmet Aksoy",
     specialty: "Dahiliye Uzmanı",
     image: doctor1,
+    education: "İstanbul Üniversitesi Tıp Fakültesi",
+    experience: "15 yıl",
+
+    bio: "Dr. Mehmet Aksoy, dahiliye hastalıkların teşhis ve tedavisinde uzmanlaşmıştır. ",
   },
   {
+    id: 2,
     name: "Dr. Ömer Kaya",
     specialty: "Kardiyoloji Uzmanı",
     image: doctor2,
+    experience: "10 yıl",
+    education: "Ankara Üniversitesi Tıp Fakültesi",
+    bio: "Dr. Ömer Kaya, kardiyoloji alanında uzmanlaşmış deneyimli bir hekimdir. Özellikle kalp yetmezliği ve hipertansiyon konularında uzmandır.",
   },
   {
+    id: 3,
     name: "Dr. Zeynep Demir",
-    specialty: "Nöroloji Uzmanı",
+    specialty: "Pediatri Uzmanı",
     image: doctor3,
+    experience: "12 yıl",
+    education: "Hacettepe Üniversitesi Tıp Fakültesi",
+    bio: "Dr. Zeynep Demir, çocuk sağlığı ve hastalıkları konusunda uzman bir pediatristtir. Yenidoğan bakımı ve çocuk beslenmesi konularında özel ilgi alanlarına sahiptir.",
   },
   {
+    id: 4,
     name: "Dr. Gamze Öztürk",
     specialty: "Ortopedi Uzmanı",
     image: doctor4,
+    education: "Ege Üniversitesi Tıp Fakültesi",
+    experience: "18 yıl",
+    bio: "Dr. Gamze Öztürk, ortopedi ve travmatoloji alanında uzman bir cerrahtır. Spor yaralanmaları ve eklem replasmanı konularında geniş deneyime sahiptir.",
   },
 ];

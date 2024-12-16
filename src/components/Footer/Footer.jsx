@@ -70,15 +70,15 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2" />
                 <a
-                  href="mailto:info@saglikmerkezi.com"
+                  href="mailto:info@vegasaglik.com"
                   className="hover:text-blue-300 transition-colors"
                 >
-                  info@saglikmerkezi.com
+                  info@vegasaglik.com
                 </a>
               </li>
               <li className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />
-                <span>Sağlık Caddesi No:123, İstanbul</span>
+                <span>Sağlık Caddesi No:123, İzmir</span>
               </li>
             </ul>
           </div>
@@ -115,7 +115,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-blue-800 text-center text-blue-300">
+        <div className="mt-8 pt-8 border-t border-sky-300 text-center text-white">
           <p>
             &copy; {new Date().getFullYear()} Vega Sağlık. Tüm hakları saklıdır.
           </p>
