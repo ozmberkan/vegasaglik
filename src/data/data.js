@@ -29,7 +29,6 @@ export const doctors = [
     image: doctor1,
     education: "İstanbul Üniversitesi Tıp Fakültesi",
     experience: "15 yıl",
-
     bio: "Dr. Mehmet Aksoy, dahiliye hastalıkların teşhis ve tedavisinde uzmanlaşmıştır. ",
   },
   {
