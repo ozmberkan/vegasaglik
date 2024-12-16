@@ -3,8 +3,11 @@ import {
   Calendar1,
   CalendarPlus,
   ChevronDown,
+  Hospital,
   LogOut,
   User,
+  User2,
+  UserCircle,
 } from "lucide-react";
 import React from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
@@ -59,11 +62,9 @@ const Navbar = () => {
         {user ? (
           <div className="flex gap-x-1 items-center">
             <Menu>
-              <MenuButton>
-                <button className="px-4 py-1 mb-1 flex items-center gap-x-2 font-semibold hover:from-blue-400 hover:to-sky-700 transition-all duration-300 rounded-full bg-gradient-to-r from-blue-500 to-sky-700 text-white">
-                  Profilim
-                  <ChevronDown />
-                </button>
+              <MenuButton className="px-4 py-1 mb-1 flex items-center gap-x-2 font-semibold hover:from-blue-400 hover:to-sky-700 transition-all duration-300 rounded-full bg-gradient-to-r from-blue-500 to-sky-700 text-white">
+                Profilim
+                <ChevronDown />
               </MenuButton>
               <MenuItems
                 anchor="bottom end"
@@ -103,6 +104,28 @@ const Navbar = () => {
                     Randevu Al
                   </Link>
                 </MenuItem>
+                {user.role === "doctor" && (
+                  <MenuItem className="flex justify-start items-start ">
+                    <Link
+                      to="/profile"
+                      className=" hover:bg-sky-50 hover:text-sky-600 transition-all duration-200 border border-transparent hover:border-sky-200 px-2 py-1 rounded-lg text-[13px] items-center  gap-x-2"
+                    >
+                      <UserCircle size={15} />
+                      Doktor Paneli
+                    </Link>
+                  </MenuItem>
+                )}
+                {user.role === "admin" && (
+                  <MenuItem className="flex justify-start items-start ">
+                    <Link
+                      to="/profile"
+                      className=" hover:bg-sky-50 hover:text-sky-600 transition-all duration-200 border border-transparent hover:border-sky-200 px-2 py-1 rounded-lg text-[13px] items-center  gap-x-2"
+                    >
+                      <UserCircle size={15} />
+                      Admin Paneli
+                    </Link>
+                  </MenuItem>
+                )}
 
                 <hr />
                 <MenuItem className="flex justify-start items-start ">

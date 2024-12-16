@@ -64,6 +64,21 @@ export const loginService = createAsyncThunk(
   }
 );
 
+export const getUser = createAsyncThunk(
+  "user/getUser",
+  async (id, { rejectWithValue }) => {
+    try {
+      const userRef = doc(db, "users", id);
+
+      const userDoc = await getDoc(userRef);
+
+      return userDoc.data();
+    } catch (error) {}
+    console.log(error);
+    return rejectWithValue(error);
+  }
+);
+
 export const userSlice = createSlice({
   name: "user",
   initialState,
@@ -90,6 +105,17 @@ export const userSlice = createSlice({
         localStorage.setItem("user", JSON.stringify(action.payload));
       })
       .addCase(loginService.rejected, (state) => {
+        state.status = "failed";
+      })
+      .addCase(getUser.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(getUser.fulfilled, (state, action) => {
+        state.status = "success";
+        state.user = action.payload;
+        localStorage.setItem("user", JSON.stringify(action.payload));
+      })
+      .addCase(getUser.rejected, (state) => {
         state.status = "failed";
       });
   },
